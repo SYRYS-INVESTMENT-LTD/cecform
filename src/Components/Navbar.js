@@ -3,7 +3,7 @@ import ceclogo from '../assets/ceclogo.png'
 import uk from '../assets/language.png'
 import { MdClose, MdKeyboardArrowDown, MdMenu } from "react-icons/md";
 import facebook from '../assets/facebook.png'
-import instagram from '../assets/instagram.png'
+import instagram from '../assets/instagramblack.png'
 import whatsapp from '../assets/whatsapp.png'
 
 function Navbar() {
