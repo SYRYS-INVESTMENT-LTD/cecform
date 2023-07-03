@@ -1033,7 +1033,7 @@ function FormSectionA() {
                         </div>
 
 
-                        <div className="border-dashed border-red-500 border-2 p-4 my-4">
+                        <div className="border-dashed border-red-500 mt-8 rounded-lg border-2 p-4 my-4">
                             <label htmlFor="documents" className="block mb-2 font-poppinsregular text-sm">
                                 Supporting Documents:
                             </label>
@@ -1059,14 +1059,7 @@ function FormSectionA() {
                                 ))}
                             </div>
 
-                            <button
-                                type="submit"
-                                className={`mt-4 bg-red-500 text-white py-2 px-4 rounded ${isUploadEnabled ? '' : 'opacity-50 cursor-not-allowed'
-                                    }`}
-                                disabled={!isUploadEnabled}
-                            >
-                                Upload Documents
-                            </button>
+                          
                         </div>
 
                         <div className='bg-[#e6e6e6] h-0.5 w-[100%] mt-14'>
@@ -1109,10 +1102,10 @@ function FormSectionA() {
                     </div>
                 </div>
             ) : (
-                <div className="flex flex-col items-center mt-10">
+                <div className="flex flex-col items-center mt-10 mx-10">
                     <CheckCircle className="text-green-500 w-12 h-12 mb-4" />
                     <h1 className="text-2xl font-poppinsmedium">Application Submitted!</h1>
-                    <p className="text-lg text-center font-poppinssemibold">
+                    <p className="text-sm mt-2 text-center font-poppinsmedium">
                         Thank you for submitting your application.
                     </p>
                 </div>

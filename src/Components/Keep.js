@@ -573,10 +573,10 @@
             </div>
         </div>
 ) : (
-  <div className="flex flex-col items-center mt-10">
+  <div className="flex flex-col items-center mt-10 mx-10">
     <CheckCircle className="text-green-500 w-12 h-12 mb-4" />
     <h1 className="text-2xl font-poppinsmedium">Application Submitted!</h1>
-    <p className="text-lg text-center font-poppinssemibold">
+    <p className="text-sm text-center font-poppinsmedium">
       Thank you for submitting your application.
     </p>
   </div>
