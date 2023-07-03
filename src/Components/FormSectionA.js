@@ -518,6 +518,7 @@ function FormSectionA() {
             await axios.post('https://api.syrysapp.com/cecleads', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
+                    'Access-Control-Allow-Origin': '*' // Add this header
                 },
 
             });
