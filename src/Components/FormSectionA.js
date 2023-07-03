@@ -512,7 +512,7 @@ function FormSectionA() {
             data.append(`supportingdocuments[${index}]`, document);
         });
 
-        console.log('Data:', Object.fromEntries(data)); // Convert FormData object to plain object for easier reading
+        //console.log('Data:', Object.fromEntries(data)); // Convert FormData object to plain object for easier reading
 
         try {
             await axios.post('https://api.syrysapp.com/cecleads', data, {
