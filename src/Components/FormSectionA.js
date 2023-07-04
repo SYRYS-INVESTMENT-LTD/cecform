@@ -472,9 +472,12 @@ function FormSectionA() {
     };
 
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const onsubmit = async (event) => {
         event.preventDefault();
+
+        setIsLoading(true);
 
         const dob = `${yearofbirth}-${monthofbirth}-${dayofbirth}`;
         const disability = studentwithdisability ? 'yes' : 'no';
@@ -540,11 +543,13 @@ function FormSectionA() {
 
             setIsFormSubmitted(true);
             toast.success('Application submitted successfully!');
+            setIsLoading(false);
 
             // Call the handleUpload function to perform any necessary operations with selectedDocuments state
             //handleUpload();
         } catch (error) {
             console.error(error);
+            setIsLoading(false);
             if (error.response && error.response.data && error.response.data.message) {
                 // Extract field names and error messages from the API response
                 const errorMessage = error.response.data.message;
@@ -559,6 +564,7 @@ function FormSectionA() {
             } else {
                 // Display a generic error message
                 toast.error('An error occurred. Please try again.');
+                setIsLoading(false);
             }
         }
     };
@@ -1124,8 +1130,34 @@ function FormSectionA() {
                         </div>
 
                         <div className='items-center flex justify-center mt-20'>
-                            <div onClick={onsubmit} className='bg-[#FF5539] cursor-pointer rounded-lg items-center flex space-x-2 justify-center py-4 px-4 w-[50%]'>
-                                <p className='text-[#fff] font-poppinsregular text-xs'>Apply Now</p>
+                            <div
+                                onClick={onsubmit}
+                                className="bg-[#FF5539] cursor-pointer rounded-lg items-center flex space-x-2 justify-center py-4 px-4 w-[50%]"
+                            >
+                                {isLoading ? (
+                                    <svg
+                                        className="animate-spin h-5 w-5 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <circle
+                                            className="opacity-25"
+                                            cx="12"
+                                            cy="12"
+                                            r="10"
+                                            stroke="currentColor"
+                                            strokeWidth="4"
+                                        ></circle>
+                                        <path
+                                            className="opacity-75"
+                                            fill="currentColor"
+                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647zM16 4.709A7.962 7.962 0 0120 12h4c0-6.627-5.373-12-12-12v4zm2 14.582l3 2.646A7.962 7.962 0 0020 12h-4c0 2.086-.81 4.018-2.137 5.463z"
+                                        ></path>
+                                    </svg>
+                                ) : (
+                                    <p className="text-[#fff] font-poppinsregular text-xs">Apply Now</p>
+                                )}
                             </div>
                         </div>
                     </div>
