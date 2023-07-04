@@ -397,6 +397,9 @@ function FormSectionA() {
     const [educationalobjective, seteducationalobjective] = useState(null);
     const [course, setcourse] = useState(null);
 
+    const [educationalObjective, seteducationalObjective] = useState("");
+    const [Course, setCourse] = useState("")
+
     const courseOptionsByObjective = {
         'Vocational School': [
             { value: 'Carpentry and Joinery', label: 'Carpentry and Joinery' },
@@ -421,12 +424,22 @@ function FormSectionA() {
     };
 
     const handleObjectiveChange = (selectedOption) => {
-        seteducationalobjective(selectedOption);
+        if (selectedOption) {
+            seteducationalobjective(selectedOption);
+            seteducationalObjective(selectedOption.value)
+        } else {
+            seteducationalObjective('');
+        }
         setcourse(null);
     };
 
     const handleCourseChange = (selectedOption) => {
-        setcourse(selectedOption);
+        if (selectedOption) {
+            setcourse(selectedOption);
+            setCourse(selectedOption.value);
+        } else {
+            setCourse('');
+        }
     };
 
     const courseOptions = educationalobjective ? courseOptionsByObjective[educationalobjective.value] : [];
@@ -443,7 +456,7 @@ function FormSectionA() {
     };
 
     const applicantaddresscountry = (selectedOption) => {
-        setnationality(selectedOption.value);
+        setcountry(selectedOption.value);
     };
 
     const guardianadresscountry = (selectedOption) => {
@@ -466,10 +479,12 @@ function FormSectionA() {
         const dob = `${yearofbirth}-${monthofbirth}-${dayofbirth}`;
         const disability = studentwithdisability ? 'yes' : 'no';
 
+        const academicHistoryJSON = JSON.stringify(academicHistory);
+
         const data = new FormData();
         data.append('applyas', applyingas);
-        data.append('educationobjective', educationalobjective);
-        data.append('course', course);
+        data.append('educationobjective', educationalObjective);
+        data.append('course', Course);
         data.append('firstname', firstname);
         data.append('lastname', lastname);
         data.append('middlename', middlename);
@@ -504,7 +519,7 @@ function FormSectionA() {
         data.append('twozip', guardianBpostalorzipcode);
         data.append('twocountry', guardianBcountry);
         data.append('disability', disability);
-        data.append('academichistory', academicHistory);
+        data.append('academichistory', academicHistoryJSON);
         data.append('source', howdidyouhearaboutus);
 
         // Append supporting documents
@@ -515,7 +530,7 @@ function FormSectionA() {
         //console.log('Data:', Object.fromEntries(data)); // Convert FormData object to plain object for easier reading
 
         try {
-            await axios.post('https://api.syrysapp.com/cecleads', data, {
+            await axios.post('https://api.syrysapp.com/api/cecleads', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Access-Control-Allow-Origin': '*' // Add this header
@@ -530,7 +545,21 @@ function FormSectionA() {
             //handleUpload();
         } catch (error) {
             console.error(error);
-            toast.error(error.message || 'An error occurred. Please try again.');
+            if (error.response && error.response.data && error.response.data.message) {
+                // Extract field names and error messages from the API response
+                const errorMessage = error.response.data.message;
+                const errorFields = Object.keys(errorMessage);
+                const errorMessages = Object.values(errorMessage);
+
+                // Display individual error messages in the toast notification
+                errorFields.forEach((field, index) => {
+                    const message = `${field}: ${errorMessages[index]}`;
+                    toast.error(message);
+                });
+            } else {
+                // Display a generic error message
+                toast.error('An error occurred. Please try again.');
+            }
         }
     };
     return (
@@ -1059,7 +1088,7 @@ function FormSectionA() {
                                 ))}
                             </div>
 
-                          
+
                         </div>
 
                         <div className='bg-[#e6e6e6] h-0.5 w-[100%] mt-14'>
