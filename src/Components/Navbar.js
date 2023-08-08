@@ -17,26 +17,26 @@ function Navbar() {
 
                 <div className='md:flex hidden'>
                     <ul className='flex items-center space-x-6'>
-                        <a href='/'>
-                            <li className='font-poppinsregular text-xs cursor-pointer text-black hover:text-[#F16101]'>Home</li>
+                        <a href='https://www.ceduconsult.com/find-university'>
+                            <li className='font-poppinsregular text-sm cursor-pointer text-black hover:text-[#F16101]'>Home</li>
                         </a>
-                        <a href='/'>
-                            <li className='font-poppinsregular text-xs cursor-pointer text-black hover:text-[#F16101]'>About</li>
+                        <a href='https://www.ceduconsult.com/find-university'>
+                            <li className='font-poppinsregular text-sm cursor-pointer text-black hover:text-[#F16101]'>About</li>
                         </a>
-                        <a href='/'>
-                            <li className='font-poppinsregular text-xs cursor-pointer text-[#000] hover:text-[#F16101]'>Universities</li>
+                        <a href='https://www.ceduconsult.com/find-university'>
+                            <li className='font-poppinsregular text-sm cursor-pointer text-[#000] hover:text-[#F16101]'>Universities</li>
                         </a>
-                        <a href='/'>
-                            <li className='font-poppinsregular text-xs cursor-pointer text-black hover:text-[#F16101]'>Courses</li>
+                        <a href='https://www.ceduconsult.com/find-university'>
+                            <li className='font-poppinsregular text-sm cursor-pointer text-black hover:text-[#F16101]'>Courses</li>
                         </a>
-                        <a href='/'>
-                            <li className='font-poppinsregular text-xs cursor-pointer text-black hover:text-[#F16101]'>For Applicants</li>
+                        <a href='https://www.ceduconsult.com/find-university'>
+                            <li className='font-poppinsregular text-sm cursor-pointer text-black hover:text-[#F16101]'>For Applicants</li>
                         </a>
-                        <a href='/'>
-                            <li className='font-poppinsregular text-xs cursor-pointer text-black hover:text-[#F16101]'>Blogs and News</li>
+                        <a href='https://www.ceduconsult.com/find-university'>
+                            <li className='font-poppinsregular text-sm cursor-pointer text-black hover:text-[#F16101]'>Blogs and News</li>
                         </a>
-                        <a href='/'>
-                            <li className='font-poppinsregular text-xs cursor-pointer text-black hover:text-[#F16101]'>Contact</li>
+                        <a href='https://www.ceduconsult.com/find-university'>
+                            <li className='font-poppinsregular text-sm cursor-pointer text-black hover:text-[#F16101]'>Contact</li>
                         </a>
                         <div className='border border-[#17A2B8] rounded-lg py-2 cursor-pointer px-2 flex items-center justify-center space-x-2'>
                             <img src={uk} alt='languageselector' className='ml-1' />
