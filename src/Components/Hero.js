@@ -5,7 +5,7 @@ function Hero() {
     return (
         <div>
             <div className='md:mx-32 md:mt-32 mt-16 mx-4'>
-                <h1 className='font-poppinsregular text-5xl'>C. Education Consultancy Scholarship Examination 2023: Your Path to Academic Excellence</h1>
+                <h1 className='font-poppinsregular text-5xl'>C. Education Consultancy Scholarship Examination 2023: Gain up to 100% Scholarship at a Leading University</h1>
                 <div className='flex items-center justify-center'>
                     <img src={heroimage} alt='heroimage' className='mt-8 w-[100%]' />
                 </div>

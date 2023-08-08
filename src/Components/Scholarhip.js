@@ -12,10 +12,15 @@ function Scholarship() {
     return (
         <div>
             <div className='mt-20 md:mx-32 mx-4'>
-                <h1 className='font-poppinsmedium text-2xl'>Scholarship Examination Details</h1>
+                <div>
+                    <h1 className='font-poppinsmedium text-2xl'>About Girne American University</h1>
+                    <p className='font-poppinsregular mt-2 md:text-base text-sm text-[#5A5A5A]'> <span className='cursor-pointer text-[#000] hover:underline'><a href='https://www.gau.edu.tr/en/'>GAU</a></span> is a leading university in Northern Cyprus, ranked as “One of the Best 100 Higher Education Provider Universities” in the <span className='cursor-pointer text-[#000] hover:underline'><a href='https://www.eduniversal-ranking.com'>Eduniversal rankings.</a></span> It is the first private university of Cyprus, established in 1985, providing higher education with an experience of 35 years. GAU boasts over 18,000 graduates from 135 countries around the world and is accredited by prestigious accrediting bodies in USA and Europe. A global university with 7 international campuses in 3 continents. </p>
+                </div>
+                <h1 className='font-poppinsmedium text-2xl mt-10'>Scholarship Examination Details</h1>
+                <h1 className='font-poppinsmedium mt-6 md:text-lg text-base'>Date and Time</h1>
                 <p className='font-poppinsregular mt-6 md:text-base text-sm text-[#5A5A5A]'>The scholarship examination is scheduled to take place on </p>
-                <h1 className='font-poppinsmedium text-xl mt-8 text-[#FD7748]'>12th August, 2023 by 11:00am -1:00pm (GMT+2),</h1>
-                <p className='font-poppinsregular mt-6 md:text-base text-sm text-[#5A5A5A]'>providing both science and arts students the opportunity to showcase their knowledge and abilities.</p>
+                <h1 className='font-poppinsmedium text-xl mt-3 text-[#FD7748]'>12th August, 2023 by 11:00am -1:00pm (GMT+2),</h1>
+                <p className='font-poppinsregular mt-4 md:text-base text-sm text-[#5A5A5A]'>providing both science and arts students the opportunity to showcase their knowledge and abilities.</p>
 
                 <div>
                     <h1 className='font-poppinsmedium mt-16 md:text-lg text-base'>Eligibility</h1>
