@@ -9,7 +9,7 @@ function Hero() {
                 <div className='flex items-center justify-center'>
                     <img src={heroimage} alt='heroimage' className='mt-8 w-[100%]' />
                 </div>
-                <p className='text-sm text-[#5A5A5A] font-poppinsregular mt-10 leading-7'>
+                <p className='md:text-base text-sm text-[#5A5A5A] font-poppinsregular mt-10 leading-7'>
                     Are you a student, with a desire to pursue higher education and fulfill your academic aspirations? C. Education Consultancy is offering an opportunity that can lead you towards a future.
                     The C. Education Consultancy Scholarship Examination aims to recognize and assist students like yourself, who demonstrate a commitment, to achieving academic excellence.
                 </p>
