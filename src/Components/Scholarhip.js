@@ -35,13 +35,45 @@ function Scholarship() {
 
                 <div>
                     <h1 className='font-poppinsmedium mt-24 text-2xl'>Frequently Asked Questions</h1>
-                    <div className='flex items-center space-x-3 mt-6 cursor-pointer' onClick={() => setfaqone(!faqone)}>
-                        <span onClick={() => setfaqone(!faqone)} className='cursor-pointer'>
-                            {faqone == true ? <MdArrowDropDown /> : <MdArrowRight />}
-                        </span>
-                        <p className='font-poppinsmedium text-sm text-[#000000]'>Will the scholarship cover all my educational expenses? </p>
-                        {faqone == true ? <p className='font-poppinsregular mt-10 text-sm text-[#5A5A5A] tracking-wide'>The scholarship covers only tuition and the award percentage will be determined based on the candidate's performance. Students may receive from 25% up to 100% scholarship on tuition.</p> : null}
+                    <div>
+                        <div className='flex items-center space-x-3 mt-6 cursor-pointer' onClick={() => setfaqone(!faqone)}>
+                            <span onClick={() => setfaqone(!faqone)} className='cursor-pointer'>
+                                {faqone == true ? <MdArrowDropDown /> : <MdArrowRight />}
+                            </span>
+                            <p className='font-poppinsmedium text-sm text-[#000000]'>Will the scholarship cover all my educational expenses? </p>
+                        </div>
+                        {faqone == true ? <p className='font-poppinsregular mt-2 text-sm text-[#5A5A5A] tracking-wide mx-7'>The scholarship covers only tuition and the award percentage will be determined based on the candidate's performance. Students may receive from 25% up to 100% scholarship on tuition.</p> : null}
                     </div>
+
+                    <div>
+                        <div className='flex items-center space-x-3 mt-6 cursor-pointer' onClick={() => setfaqtwo(!faqtwo)}>
+                            <span onClick={() => setfaqtwo(!faqtwo)} className='cursor-pointer'>
+                                {faqtwo == true ? <MdArrowDropDown /> : <MdArrowRight />}
+                            </span>
+                            <p className='font-poppinsmedium text-sm text-[#000000]'>Is there an application fee for the scholarship examination?</p>
+                        </div>
+                        {faqtwo == true ? <p className='font-poppinsregular mt-2 text-sm text-[#5A5A5A] tracking-wide mx-7'>No, the application for the scholarship examination is entirely free of charge.</p> : null}
+                    </div>
+
+                    <div>
+                        <div className='flex items-center space-x-3 mt-6 cursor-pointer' onClick={() => setfaqthree(!faqthree)}>
+                            <span onClick={() => setfaqthree(!faqthree)} className='cursor-pointer'>
+                                {faqthree == true ? <MdArrowDropDown /> : <MdArrowRight />}
+                            </span>
+                            <p className='font-poppinsmedium text-sm text-[#000000]'>Is the exam for Postgraduate students?</p>
+                        </div>
+                        {faqthree == true ? <p className='font-poppinsregular mt-2 text-sm text-[#5A5A5A] tracking-wide mx-7'>The Exam is only for Undergraduate/BSc/BA applicants however you can also apply for Postgraduate/MSc/MA/PhD Programs with special discounts.</p> : null}
+                    </div>
+                </div>
+
+                <div>
+                    <h1 className='font-poppinsmedium mt-24 text-2xl'>Our Commitment</h1>
+                    <p className='font-poppinsregular mt-6 text-sm text-[#5A5A5A] tracking-wide leading-7'>At C. Education Consultancy we truly believe in your potential. We are fully committed, to supporting you every step of the way throughout your journey. Our team of experts is always available to offer guidance and assistance whenever you require it. We genuinely understand the importance of your aspirations and our sole aim is to assist you in achieving them.
+                        Don't miss this fantastic opportunity to transform your dreams into reality. Register now for the C. Education Consultancy Scholarship Examination and set yourself on the path to academic success!
+                        <br></br>
+                        Register <span className='underline text-[#FD7748] cursor-pointer'>here.</span> to secure your spot. <br></br>
+                        Should you have any further questions or require additional information, feel free to reach out to us at <span className='underline text-[#000000] cursor-pointer'>info@ceduconsult.com</span> or call <span className='text-[#000000] cursor-pointer'>+90 5469924354.</span><br></br>
+                        We are excited to witness your brilliance shine in the scholarship examination!</p>
                 </div>
             </div>
         </div>
