@@ -9,27 +9,27 @@
 
   @font-face {
     font-family: "POPPINSBOLD";
-    src: url("../public/Fonts/Poppins-Bold.ttf");
+    src: url("../public/Fonts/GeneralSans-Bold.ttf");
   }
 
   @font-face {
     font-family: "POPPINSSEMIBOLD";
-    src: url("../public/Fonts/Poppins-SemiBold.ttf");
+    src: url("../public/Fonts/GeneralSans-Semibold.ttf");
   }
 
   @font-face {
     font-family: "POPPINSMEDIUM";
-    src: url("../public/Fonts/Poppins-Medium.ttf");
+    src: url("../public/Fonts/GeneralSans-Medium.ttf");
   }
 
   @font-face {
     font-family: "POPPINSREGULAR";
-    src: url("../public/Fonts/Poppins-Regular.ttf");
+    src: url("../public/Fonts/GeneralSans-Regular.ttf");
   }
 
   @font-face {
     font-family: "POPPINSTHIN";
-    src: url("../public/Fonts/Poppins-Thin.ttf");
+    src: url("../public/Fonts/GeneralSans-Light.ttf");
   }
 
 
